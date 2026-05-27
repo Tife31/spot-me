@@ -1,0 +1,47 @@
+{
+  "id": "spot-me",
+  "name": "SpotMe",
+  "description": "Find the best parking near your Toronto calendar destinations — recommends up to 3 spots optimized for price, proximity, and best overall, using your calendar event times to estimate parking duration and cost.",
+  "version": "1.0.0",
+  "author": "Tife",
+  "icon": "ParkingCircle",
+  "enabled": true,
+  "group": "Toronto",
+  "menuPriority": 60,
+  "fullscreen": false,
+  "permissions": {
+    "database": true,
+    "api": true,
+    "dashboard": true
+  },
+  "routes": [
+    {
+      "path": "/spot-me",
+      "label": "SpotMe",
+      "icon": "ParkingCircle",
+      "sidebarPosition": "main"
+    }
+  ],
+  "dependencies": {
+    "modules": [],
+    "coreFeatures": []
+  },
+  "database": {
+    "tables": ["spot_me_settings"]
+  },
+  "dashboard": {
+    "widgets": true,
+    "statCards": ["./components/dashboard-stat-card.tsx"]
+  },
+  "settings": {
+    "panel": "./components/settings-panel.tsx"
+  },
+  "topBarIcon": {
+    "icon": "ParkingCircle",
+    "route": "/spot-me",
+    "tooltip": "SpotMe"
+  },
+  "submenu": {
+    "component": "./components/sidebar-submenu.tsx"
+  }
+}
